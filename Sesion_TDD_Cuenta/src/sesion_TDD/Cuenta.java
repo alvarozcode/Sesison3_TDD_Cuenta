@@ -8,14 +8,12 @@ public class Cuenta {
     String nTitular;
     List<Movimiento> mMovimientos;
 
-    // Constructor
     public Cuenta(String numero, String titular) {
         this.mNumero = numero;
         this.nTitular = titular;
         this.mMovimientos = new ArrayList<>();
     }
 
-    // Constructor con saldo inicial
     public Cuenta(String numero, String titular, double saldoInicial) {
         this(numero, titular);
         if (saldoInicial != 0.0) {
@@ -30,11 +28,13 @@ public class Cuenta {
     }
 
     public void retirar(double x) {
-        // Límite de descubierto de 500€ (el saldo no puede bajar de -500.0)
+        // Límite de descubierto de 500€ (el saldo no puede bajar de -500.0€)
         if (x > 0 && (getSaldo() - x) >= -500.0) {
             mMovimientos.add(new Movimiento(x, Signo.D, "Retirada de efectivo"));
         } else {
-            System.out.println("Fondos insuficientes (saldo " + getSaldo() + "€) en la cuenta " + mNumero + " para el reintegro de " + x + "€");
+            // Imprime exactamente el formato de error solicitado en la imagen
+            System.out.println("Fondos insuficientes (saldo " + (int)getSaldo() + "€) en la cuenta " 
+                               + mNumero + " para el reintegro de " + (int)x + "€");
         }
     }
 
@@ -48,5 +48,9 @@ public class Cuenta {
             }
         }
         return saldo;
+    }
+
+    public String getNumero() {
+        return mNumero;
     }
 }
