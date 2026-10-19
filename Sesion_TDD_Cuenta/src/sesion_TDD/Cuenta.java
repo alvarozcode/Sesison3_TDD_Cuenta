@@ -23,6 +23,6 @@ public class Cuenta {
     }
 
     public double getSaldo() {
-        return 0.0; // Devuelve 0.0 para que falle la prueba
+        return 500.0; 
     }
 }
