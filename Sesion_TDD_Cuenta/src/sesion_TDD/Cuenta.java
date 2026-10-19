@@ -15,11 +15,11 @@ public class Cuenta {
     }
 
     public void ingresar(double x) {
-    	//Vacío
+    	//Vacío,
     }
 
     public void retirar(double x) {
-        //Vacío
+        //Vacío.
     }
 
     public double getSaldo() {

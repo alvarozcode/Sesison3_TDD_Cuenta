@@ -27,6 +27,7 @@ class CuentaTest {
     void setUp() throws Exception {
         cuenta = new Cuenta("12345", "Juan Pérez");
     }
+    
 
     @AfterEach
     void tearDown() throws Exception {

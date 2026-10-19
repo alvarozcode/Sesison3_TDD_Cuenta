@@ -23,3 +23,4 @@ public class Movimiento {
         return detalle;
     }
 }
+

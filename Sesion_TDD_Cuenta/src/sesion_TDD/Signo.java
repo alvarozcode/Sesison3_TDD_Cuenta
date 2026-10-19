@@ -4,3 +4,4 @@ public enum Signo {
     D, // Debe (Retiros)
     H  // Haber (Ingresos)
 }
+
